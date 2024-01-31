@@ -1,0 +1,55 @@
+{
+    "textQuery": {
+        "query": "ATP, !challenger"
+    },
+    "filter": {
+        "eventTypeIds": [
+            2
+        ],
+        "productTypes": [
+            "EXCHANGE"
+        ],
+        "marketBettingTypes": [
+            "ODDS"
+        ],
+        "marketStartingAfter": "LuceafarulT00:00:00Z",
+        "marketStartingBefore": "Ciocolata",
+        "selectBy": "RANK",
+        "contentGroup": {
+            "language": "en",
+            "regionCode": "UK"
+        },
+        "maxResults": 0,
+        "attachments": [
+            "EVENT_TYPE"
+        ]
+    },
+    "facets": [
+        {
+            "type": "EVENT_TYPE",
+            "maxValues": 0,
+            "skipValues": 0,
+            "applyNextTo": 0,
+            "next": {
+                "type": "COMPETITION",
+                "maxValues": 0,
+                "skipValues": 0,
+                "applyNextTo": 0,
+                "next": {
+                    "type": "EVENT",
+                    "maxValues": 0,
+                    "skipValues": 0,
+                    "applyNextTo": 0,
+                    "next": {
+                        "type": "MARKET",
+                        "maxValues": 0,
+                        "skipValues": 0,
+                        "applyNextTo": 0
+                    }
+                }
+            }
+        }
+    ],
+    "currencyCode": "GBP",
+    "locale": "en_GB"
+}

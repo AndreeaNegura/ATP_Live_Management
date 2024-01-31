@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>ITF_Live_Management</id>
+    <version>1.0.49</version>
+    <title>ITF_Live_Management</title>
+    <authors>nicah</authors>
+    <owners>nicah</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Robotic Enterprise Framework</description>
+    <releaseNotes>Modified the API call by removing the User &amp; Pass from the auth. in Betradar API - related workflows.</releaseNotes>
+    <tags>VisualBasic VB UiPathStudioProcess</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="Microsoft.Activities" version="[1.0.1]" />
+        <dependency id="tennisCompetitionClass" version="[1.0.3]" />
+        <dependency id="UiPath.Excel.Activities" version="[2.9.5]" />
+        <dependency id="UiPath.Mail.Activities" version="[1.9.5]" />
+        <dependency id="UiPath.System.Activities" version="[20.4.0]" />
+        <dependency id="UiPath.UIAutomation.Activities" version="[20.4.1]" />
+        <dependency id="UiPath.WebAPI.Activities" version="[1.7.0]" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

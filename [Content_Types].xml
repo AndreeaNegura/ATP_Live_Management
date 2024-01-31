@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml" />
+  <Default Extension="psmdcp" ContentType="application/vnd.openxmlformats-package.core-properties+xml" />
+  <Default Extension="gitignore" ContentType="application/octet" />
+  <Default Extension="json" ContentType="application/octet" />
+  <Default Extension="xaml" ContentType="application/octet" />
+  <Default Extension="nupkg" ContentType="application/octet" />
+  <Default Extension="txt" ContentType="application/octet" />
+  <Default Extension="xlsx" ContentType="application/octet" />
+  <Default Extension="docx" ContentType="application/octet" />
+  <Default Extension="drawio" ContentType="application/octet" />
+  <Default Extension="pdf" ContentType="application/octet" />
+  <Default Extension="cs" ContentType="application/octet" />
+  <Default Extension="csproj" ContentType="application/octet" />
+  <Default Extension="sln" ContentType="application/octet" />
+  <Default Extension="v2" ContentType="application/octet" />
+  <Default Extension="suo" ContentType="application/octet" />
+  <Default Extension="dll" ContentType="application/octet" />
+  <Default Extension="pdb" ContentType="application/octet" />
+  <Default Extension="cache" ContentType="application/octet" />
+  <Default Extension="exe" ContentType="application/octet" />
+  <Default Extension="props" ContentType="application/octet" />
+  <Default Extension="targets" ContentType="application/octet" />
+  <Default Extension="CopyComplete" ContentType="application/octet" />
+  <Default Extension="editorconfig" ContentType="application/octet" />
+  <Default Extension="xml" ContentType="application/octet" />
+  <Default Extension="metadata" ContentType="application/octet" />
+  <Default Extension="type" ContentType="application/octet" />
+  <Default Extension="nuspec" ContentType="application/octet" />
+</Types>

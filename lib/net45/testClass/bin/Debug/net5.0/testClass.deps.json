@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "testClass/1.0.0": {
+        "dependencies": {
+          "ITF_LiveManagement": "1.0.0"
+        },
+        "runtime": {
+          "testClass.dll": {}
+        }
+      },
+      "ITF_LiveManagement/1.0.0": {
+        "runtime": {
+          "ITF_LiveManagement.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "testClass/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ITF_LiveManagement/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

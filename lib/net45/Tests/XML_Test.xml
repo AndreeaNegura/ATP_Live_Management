@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <match_timeline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated_at="2021-07-22T11:24:52+00:00" xmlns="http://schemas.sportradar.com/sportsapi/v1/unified" xsi:schemaLocation="http://schemas.sportradar.com/sportsapi/v1/unified http://schemas.sportradar.com/bsa/unified/v1/xml/endpoints/unified/match_timeline.xsd">
+    <sport_event id="sr:match:28245578" scheduled="2021-07-21T07:00:00+00:00" start_time_tbd="false">
+      <tournament_round type="cup" name="round_of_32" betradar_id="104956"/>
+      <season id="sr:season:85064" name="2021 Itf Russia 04A, Women Singles" start_date="2021-07-19" end_date="2021-07-25" year="2021" tournament_id="sr:tournament:19546"/>
+      <tournament id="sr:tournament:19546" name="ITF Russia 04A, Women Singles">
+        <sport id="sr:sport:5" name="Tennis"/>
+        <category id="sr:category:213" name="ITF Women"/>
+      </tournament>
+      <competitors>
+        <competitor id="sr:competitor:819748" name="Zyryanova, Anna" country="Russia" country_code="RUS" abbreviation="ZYR" qualifier="home" gender="female">
+          <reference_ids>
+            <reference_id name="betradar" value="18380630"/>
+          </reference_ids>
+        </competitor>
+        <competitor id="sr:competitor:473053" name="Shakirova, Dana" country="USA" country_code="USA" abbreviation="SHA" qualifier="away" gender="female">
+          <reference_ids>
+            <reference_id name="betradar" value="11171846"/>
+          </reference_ids>
+        </competitor>
+      </competitors>
+      <venue id="sr:venue:1390" name="COURT 2" city_name="Moscow" country_name="Russia" country_code="RUS"/>
+    </sport_event>
+    <sport_event_conditions match_mode="bo3">
+      <venue id="sr:venue:1390" name="COURT 2" city_name="Moscow" country_name="Russia" country_code="RUS"/>
+    </sport_event_conditions>
+    <sport_event_status status="closed" match_status="retired" winner_id="sr:competitor:819748" status_code="4" match_status_code="92">
+      <period_scores>
+        <period_score home_score="6" away_score="0" type="regular_period" number="1" match_status_code="8"/>
+        <period_score home_score="6" away_score="7" type="regular_period" number="2" match_status_code="9"/>
+      </period_scores>
+    </sport_event_status>
+    <timeline>
+      <event id="938777506" type="match_started" time="2021-07-21T07:10:52+00:00"/>
+      <event id="938777508" type="period_start" time="2021-07-21T07:10:52+00:00" period="1" period_name="1st set" match_status_code="8"/>
+      <event id="938778442" type="period_score" time="2021-07-21T07:13:34+00:00" period="1" home_score="2" away_score="0" match_status_code="8"/>
+      <event id="938779652" type="period_score" time="2021-07-21T07:17:25+00:00" period="1" home_score="2" away_score="0" match_status_code="8"/>
+      <event id="938780834" type="period_score" time="2021-07-21T07:21:28+00:00" period="1" home_score="3" away_score="0" match_status_code="8"/>
+      <event id="938782396" type="period_score" time="2021-07-21T07:26:19+00:00" period="1" home_score="4" away_score="0" match_status_code="8"/>
+      <event id="938783244" type="period_score" time="2021-07-21T07:28:56+00:00" period="1" home_score="5" away_score="0" match_status_code="8"/>
+      <event id="938785282" type="period_score" time="2021-07-21T07:34:44+00:00" period="1" home_score="6" away_score="0" match_status_code="8"/>
+      <event id="938785284" type="period_start" time="2021-07-21T07:34:44+00:00" period="2" period_name="2nd set" match_status_code="9"/>
+      <event id="938786246" type="period_score" time="2021-07-21T07:37:34+00:00" period="2" home_score="2" away_score="0" match_status_code="9"/>
+      <event id="938787378" type="match_ended" time="2021-07-21T07:41:21+00:00"/>
+    </timeline>
+  </match_timeline>

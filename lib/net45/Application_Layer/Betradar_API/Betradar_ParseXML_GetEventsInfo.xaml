@@ -1,0 +1,165 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Betradar_ParseXML_CSharp_GetEventsInfo" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:i="clr-namespace:ITF_LiveManagement;assembly=ITF_LiveManagement" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Type 't:tennisCompetition' ('clr-namespace:tennisCompetition;assembly=tennisCompetition') could not be resolved and was automatically replaced with 'UnknownType'&#xA;Type 'i:tennisCompetition' ('clr-namespace:ITF_LiveManagement;assembly=tennisCompetition') could not be resolved and was automatically replaced with 'UnknownType'" Name="io_EventInfo" Type="InOutArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="in_xmlString" Type="InArgument(x:String)" />
+    <x:Property Name="io_ListOfBetradarEventsMatched" Type="InOutArgument(scg:List(x:String))" />
+  </x:Members>
+  <this:Betradar_ParseXML_CSharp_GetEventsInfo.in_xmlString>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Betradar_ParseXML_CSharp_GetEventsInfo.in_xmlString>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>940,1710.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Betradar_ParseXML_CSharp_GetEventsInfo_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>ITF_LiveManagement</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>tennisCompetition</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>ITF_LiveManagement</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Read the XML result corresponding to a single event and extract the desired data for each of the attributes: &#xA;status, match_status, home_score, away_score" DisplayName="Betradar_ParseXML_CSharp_GetEventsInfo" sap:VirtualizedContainerService.HintSize="524.8,1545.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="i:tennisCompetition" sap2010:Annotation.AnnotationText="Type 'm:Market' ('clr-namespace:MarketsClass;assembly=MarketsClass') could not be resolved and was automatically replaced with 'UnknownType'&#xA;Type 'i:tennisCompetition' ('clr-namespace:ITF_LiveManagement;assembly=tennisCompetition') could not be resolved and was automatically replaced with 'UnknownType'" Name="market" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Betradar_ParseXML_CSharp_GetEventsInfo started&quot;]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Parse response of API on a single event and populate the object with values for: &#xA;status, match_status, home_score, away_score" Code="//load xml String Into xdoc&#xA;XDocument xdocAllSports = XDocument.Parse(xmlString);&#xA;XNamespace xNamespace = &quot;http://schemas.sportradar.com/sportsapi/v1/unified&quot;;&#xA;var sportEventsDescendents = xdocAllSports.Descendants(&quot;{&quot;+xNamespace+&quot;}sport_event&quot;);&#xA;var sportEventsStatusDescendents = xdocAllSports.Descendants(&quot;{&quot;+xNamespace+&quot;}sport_event_status&quot;);&#xA;&#xA;//var home_runnerId = sportEventsDescendents.Descendants(&quot;competitors&quot;).Descendants(&quot;competitor&quot;).Attributes(&quot;id&quot;).Last().Value;&#xA;//var away_runnerId = sportEventsDescendents.Descendants(&quot;competitors&quot;).Descendants(&quot;competitor&quot;).Attributes(&quot;id&quot;).Last().Value;&#xA;&#xA;foreach(var sportEvent in sportEventsDescendents)&#xA;{&#xA;&#x9;//Get competitors&#xA;&#x9;var competitors = sportEvent.Descendants(&quot;{&quot;+xNamespace+&quot;}competitors&quot;).First();&#xA;&#x9;//Get player Ids&#xA;&#x9;var home_runnerId = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}competitor&quot;).First().Attribute(&quot;id&quot;).Value;&#xA;&#x9;var away_runnerId = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}competitor&quot;).Last().Attribute(&quot;id&quot;).Value;&#xA;&#x9;//add player Ids to dict&#xA;&#x9;eventInfo[&quot;home_runnerId&quot;]= home_runnerId;&#xA;&#x9;eventInfo[&quot;away_runnerId&quot;]= away_runnerId;&#xA;}&#x9;&#xA;&#xA;//init variables&#xA;var status = &quot;&quot;;&#xA;var match_status = &quot;&quot;;&#xA;var home_score = &quot;&quot;;&#xA;var away_score = &quot;&quot;;&#xA;var winner_id = &quot;&quot;;&#xA;&#xA;//check if tags exist in the node and assign value if so&#xA;if(sportEventsStatusDescendents.Attributes(&quot;status&quot;).Any())&#xA;{&#xA;&#x9;status = sportEventsStatusDescendents.Attributes(&quot;status&quot;).First().Value;&#xA;}&#xA;if(sportEventsStatusDescendents.Attributes(&quot;match_status&quot;).Any())&#xA;{&#xA;&#x9;match_status = sportEventsStatusDescendents.Attributes(&quot;match_status&quot;).First().Value;&#xA;}&#xA;if(sportEventsStatusDescendents.Attributes(&quot;home_score&quot;).Any())&#xA;{&#xA;&#x9;home_score = sportEventsStatusDescendents.Attributes(&quot;home_score&quot;).First().Value;&#xA;}&#xA;if(sportEventsStatusDescendents.Attributes(&quot;away_score&quot;).Any())&#xA;{&#xA;&#x9;away_score = sportEventsStatusDescendents.Attributes(&quot;away_score&quot;).First().Value;&#xA;}&#xA;if(sportEventsStatusDescendents.Attributes(&quot;winner_id&quot;).Any())&#xA;{&#xA;&#x9;winner_id = sportEventsStatusDescendents.Attributes(&quot;winner_id&quot;).First().Value;&#xA;}&#xA;&#xA;//populate dict keys&#xA;eventInfo[&quot;status&quot;]= status;&#xA;eventInfo[&quot;match_status&quot;]= match_status;&#xA;eventInfo[&quot;home_score&quot;]= home_score;&#xA;eventInfo[&quot;away_score&quot;]= away_score;&#xA;eventInfo[&quot;winner_id&quot;]= winner_id;&#xA;&#xA;//Console.WriteLine(&quot;haide testule &quot;+status+match_status+home_score+away_score);" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="483.2,144.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="xmlString">[in_xmlString]</InArgument>
+        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="eventInfo">[io_EventInfo]</InOutArgument>
+      </ui:InvokeCode.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeCode>
+    <If Condition="[in_xmlString.Contains(&quot;period_scores&quot;) AndAlso&#xA;(io_EventInfo(&quot;status&quot;).ToString.Equals(&quot;ended&quot;) OrElse io_EventInfo(&quot;status&quot;).ToString.Equals(&quot;closed&quot;))]" sap:VirtualizedContainerService.HintSize="483.2,880" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="375.2,696.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Comment sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// to be added:&#xA; cases for doubles where the match goes in the 3rd set, which playes first to 10, and 2 difference&#xA;not 6 and 2 difference as the regular sets" />
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,221.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Parse response of API on a single event and populate the object with values for: &#xA;number_of_sets" Code="//load xml String Into xdoc&#xA;XDocument xdocAllSports = XDocument.Parse(xmlString);&#xA;XNamespace xNamespace = &quot;http://schemas.sportradar.com/sportsapi/v1/unified&quot;;&#xA;var sportEventsStatusDescendents = xdocAllSports.Descendants(&quot;{&quot;+xNamespace+&quot;}sport_event_status&quot;);&#xA;&#xA;foreach(var sportEvent in sportEventsStatusDescendents)&#xA;{&#xA;&#x9;//Console.WriteLine(sportEvent);&#xA;&#xA;&#x9;var competitors = sportEvent.Descendants(&quot;{&quot;+xNamespace+&quot;}period_scores&quot;).First();&#xA;&#x9;var number_of_sets = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}period_score&quot;).Last().Attribute(&quot;number&quot;).Value;&#xA;&#x9;&#xA;&#x9;var home = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}period_score&quot;).Last().Attribute(&quot;home_score&quot;).Value;&#xA;&#x9;var away = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}period_score&quot;).Last().Attribute(&quot;away_score&quot;).Value;&#xA;&#x9;Console.WriteLine(&quot;nr of sets writen &quot;+number_of_sets+Environment.NewLine+&quot;home games &quot;+home+Environment.NewLine+&quot;away games &quot;+away);&#xA;&#x9;&#xA;&#x9;//one of the teams won 6 and the other 7 games&#xA;&#x9;if((home.Equals(&quot;6&quot;) || away.Equals(&quot;6&quot;)) &amp;&amp; (home.Equals(&quot;7&quot;) || away.Equals(&quot;7&quot;)))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-7 || 7-6, increment set&quot;);&#xA;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;}&#xA;&#x9;//both of the teams won 6 games&#xA;&#x9;else if(home.Equals(&quot;6&quot;) &amp;&amp; away.Equals(&quot;6&quot;))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-6, still in set&quot;);&#xA;&#x9;}&#xA;&#x9;//one of the teams won 6 and the other 5 games&#xA;&#x9;else if((home.Equals(&quot;6&quot;) || away.Equals(&quot;6&quot;)) &amp;&amp; (home.Equals(&quot;5&quot;) || away.Equals(&quot;5&quot;)))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-5 || 5-6, still in set&quot;);&#xA;&#x9;}&#xA;&#x9;//one of the teams won 6 and the other less than 5 games&#xA;&#x9;else if((home.Equals(&quot;6&quot;) || away.Equals(&quot;6&quot;)) &amp;&amp; (Int32.Parse(home)&lt;5 || Int32.Parse(away) &lt;5))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-less than 5 || less than 5-6, increment set&quot;);&#xA;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;}&#xA;&#x9;//both of the teams won less than 5 games&#xA;&#x9;else if(Int32.Parse(home)&lt;5 &amp;&amp; Int32.Parse(away) &lt;5)&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;less than 5-less than 5, still in set&quot;);&#xA;&#x9;}&#xA;&#x9;//one of the teams won 7 and the other 5 games&#xA;&#x9;else if((home.Equals(&quot;7&quot;) || away.Equals(&quot;7&quot;)) &amp;&amp; (home.Equals(&quot;5&quot;) || away.Equals(&quot;5&quot;)))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;7-5 || 5-7, increment set&quot;);&#xA;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;}&#xA;&#x9;eventInfo[&quot;number_of_sets&quot;] = number_of_sets;&#xA;}&#x9;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="200,128.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+                  <ui:InvokeCode.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="xmlString">[in_xmlString]</InArgument>
+                    <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="eventInfo">[io_EventInfo]</InOutArgument>
+                  </ui:InvokeCode.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeCode>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Parse response of API on a single event and populate the object with values for: &#xA;number_of_sets" Code="//load xml String Into xdoc&#xA;XDocument xdocAllSports = XDocument.Parse(xmlString);&#xA;XNamespace xNamespace = &quot;http://schemas.sportradar.com/sportsapi/v1/unified&quot;;&#xA;var sportEventsStatusDescendents = xdocAllSports.Descendants(&quot;{&quot;+xNamespace+&quot;}sport_event_status&quot;);&#xA;var tournamentDescendents = xdocAllSports.Descendants(&quot;{&quot;+xNamespace+&quot;}tournament&quot;).First().Attribute(&quot;name&quot;).Value;&#xA;var eventType = &quot;&quot;;&#xA;if(tournamentDescendents.Contains(&quot;Doubles&quot;))&#xA;{&#xA;&#x9;eventType = &quot;double&quot;;&#x9;&#xA;}&#xA;else&#xA;{&#xA;&#x9;eventType = &quot;single&quot;;&#xA;}&#xA;&#xA;foreach(var sportEvent in sportEventsStatusDescendents)&#xA;{&#xA;&#x9;//Console.WriteLine(sportEvent);&#xA;&#xA;&#x9;var competitors = sportEvent.Descendants(&quot;{&quot;+xNamespace+&quot;}period_scores&quot;).First();&#xA;&#x9;var number_of_sets = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}period_score&quot;).Last().Attribute(&quot;number&quot;).Value;&#xA;&#x9;&#xA;&#x9;var home = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}period_score&quot;).Last().Attribute(&quot;home_score&quot;).Value;&#xA;&#x9;var away = competitors.Descendants(&quot;{&quot;+xNamespace+&quot;}period_score&quot;).Last().Attribute(&quot;away_score&quot;).Value;&#xA;&#x9;Console.WriteLine(&quot;nr of sets written &quot;+number_of_sets+Environment.NewLine+&quot;home games &quot;+home+Environment.NewLine+&quot;away games &quot;+away);&#xA;&#x9;&#xA;&#x9;if(eventType.Equals(&quot;double&quot;) &amp;&amp; number_of_sets.Equals(&quot;3&quot;))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;doubles event in 3rd set&quot;);&#xA;&#x9;&#x9;if((home.Equals(&quot;10&quot;) || away.Equals(&quot;10&quot;)) &amp;&amp; (home.Equals(&quot;11&quot;) || away.Equals(&quot;11&quot;)))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;10-11 || 11-10, increment set&quot;);&#xA;&#x9;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;//both of the teams won 10 games&#xA;&#x9;&#x9;else if(home.Equals(&quot;10&quot;) &amp;&amp; away.Equals(&quot;10&quot;))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;10-10, still in set&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;//one of the teams won 10 and the other 9 games&#xA;&#x9;&#x9;else if((home.Equals(&quot;10&quot;) || away.Equals(&quot;10&quot;)) &amp;&amp; (home.Equals(&quot;9&quot;) || away.Equals(&quot;9&quot;)))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;10-9 || 9-10, still in set&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;//one of the teams won 10 and the other less than 9 games&#xA;&#x9;&#x9;else if((home.Equals(&quot;10&quot;) || away.Equals(&quot;10&quot;)) &amp;&amp; (Int32.Parse(home)&lt;9 || Int32.Parse(away) &lt;9))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;10-less than 9 || less than 9-10, increment set&quot;);&#xA;&#x9;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;//both of the teams won less than 9 games&#xA;&#x9;&#x9;else if(Int32.Parse(home)&lt;9 &amp;&amp; Int32.Parse(away) &lt;9)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;less than 9-less than 9, still in set&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;//one of the teams won 11 and the other 9 games&#xA;&#x9;&#x9;else if((home.Equals(&quot;11&quot;) || away.Equals(&quot;11&quot;)) &amp;&amp; (home.Equals(&quot;9&quot;) || away.Equals(&quot;9&quot;)))&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;11-9 || 9-11, increment set&quot;);&#xA;&#x9;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#x9;//one of the teams won 6 and the other 7 games&#xA;&#x9;else if((home.Equals(&quot;6&quot;) || away.Equals(&quot;6&quot;)) &amp;&amp; (home.Equals(&quot;7&quot;) || away.Equals(&quot;7&quot;)))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-7 || 7-6, increment set&quot;);&#xA;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;}&#xA;&#x9;//both of the teams won 6 games&#xA;&#x9;else if(home.Equals(&quot;6&quot;) &amp;&amp; away.Equals(&quot;6&quot;))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-6, still in set&quot;);&#xA;&#x9;}&#xA;&#x9;//one of the teams won 6 and the other 5 games&#xA;&#x9;else if((home.Equals(&quot;6&quot;) || away.Equals(&quot;6&quot;)) &amp;&amp; (home.Equals(&quot;5&quot;) || away.Equals(&quot;5&quot;)))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-5 || 5-6, still in set&quot;);&#xA;&#x9;}&#xA;&#x9;//one of the teams won 6 and the other less than 5 games&#xA;&#x9;else if((home.Equals(&quot;6&quot;) || away.Equals(&quot;6&quot;)) &amp;&amp; (Int32.Parse(home)&lt;5 || Int32.Parse(away) &lt;5))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;6-less than 5 || less than 5-6, increment set&quot;);&#xA;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;}&#xA;&#x9;//both of the teams won less than 5 games&#xA;&#x9;else if(Int32.Parse(home)&lt;5 &amp;&amp; Int32.Parse(away) &lt;5)&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;less than 5-less than 5, still in set&quot;);&#xA;&#x9;}&#xA;&#x9;//one of the teams won 7 and the other 5 games&#xA;&#x9;else if((home.Equals(&quot;7&quot;) || away.Equals(&quot;7&quot;)) &amp;&amp; (home.Equals(&quot;5&quot;) || away.Equals(&quot;5&quot;)))&#xA;&#x9;{&#xA;&#x9;&#x9;Console.WriteLine(&quot;7-5 || 5-7, increment set&quot;);&#xA;&#x9;&#x9;number_of_sets = (Int32.Parse(number_of_sets) +1).ToString();&#xA;&#x9;}&#xA;&#x9;eventInfo[&quot;number_of_sets&quot;] = number_of_sets;&#xA;&#x9;eventInfo[&quot;eventType&quot;] = eventType;&#xA;}&#x9;" DisplayName="Invoke code + doubles &amp; rules" sap:VirtualizedContainerService.HintSize="333.6,224.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="xmlString">[in_xmlString]</InArgument>
+              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="eventInfo">[io_EventInfo]</InOutArgument>
+            </ui:InvokeCode.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeCode>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;nr of sets: &quot;+io_EventInfo(&quot;number_of_sets&quot;).ToString+Environment.NewLine+&#xA;&quot;event type: &quot;+io_EventInfo(&quot;eventType&quot;).ToString]" />
+        </Sequence>
+      </If.Then>
+    </If>
+    <AddToCollection x:TypeArguments="x:String" Collection="[io_ListOfBetradarEventsMatched]" DisplayName="Add To Collection - bet id" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[io_EventInfo(&quot;betradarID&quot;).ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;stop&quot;]" />
+  </Sequence>
+</Activity>

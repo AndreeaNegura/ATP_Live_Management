@@ -1,0 +1,10 @@
+C:\Users\DeliaPanca\Documents\GitHub\fwf-betfair\tennisCompetition\bin\Debug\tennisCompetition.dll
+C:\Users\DeliaPanca\Documents\GitHub\fwf-betfair\tennisCompetition\bin\Debug\tennisCompetition.pdb
+C:\Users\DeliaPanca\Documents\GitHub\fwf-betfair\tennisCompetition\obj\Debug\tennisCompetition.csproj.CoreCompileInputs.cache
+C:\Users\DeliaPanca\Documents\GitHub\fwf-betfair\tennisCompetition\obj\Debug\tennisCompetition.dll
+C:\Users\DeliaPanca\Documents\GitHub\fwf-betfair\tennisCompetition\obj\Debug\tennisCompetition.pdb
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\bin\Debug\tennisCompetition.dll
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\bin\Debug\tennisCompetition.pdb
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\obj\Debug\tennisCompetition.csproj.CoreCompileInputs.cache
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\obj\Debug\tennisCompetition.dll
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\obj\Debug\tennisCompetition.pdb

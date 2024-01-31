@@ -1,0 +1,5 @@
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\bin\Debug\ITF_LiveManagement.dll
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\bin\Debug\ITF_LiveManagement.pdb
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\obj\Debug\ITF_LiveManagement.csproj.CoreCompileInputs.cache
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\obj\Debug\ITF_LiveManagement.dll
+C:\Users\popescug\Documents\UiPath\ITF_Live_Management\tennisCompetition\obj\Debug\ITF_LiveManagement.pdb
